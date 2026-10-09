@@ -5,7 +5,7 @@
 --------
 1. **数值不进 LLM**：候选枚举、套餐价判定、优惠券选择、多目标打分排序全部在本模块
    完成。LLM 只做意图解析与话术生成，因此方案中每一个数字都可复现、可追溯、可解释。
-2. **零第三方依赖**：仅使用标准库，任何人 clone 后直接 ``python scripts/demo_offline.py``
+2. **零第三方依赖**：仅使用标准库，任何人 clone 后直接 ``python3 scripts/demo_offline.py``
    即可在无 Token 环境下验证算法正确性。
 3. **可解释**：每个方案都返回扣分/加分明细，便于回答"为什么推荐它"。
 
@@ -337,7 +337,7 @@ class OptimizationResult:
     best_protein: Optional[ScoredCombo] = None
     best_value: Optional[ScoredCombo] = None
     relax_note: Optional[str] = None
-    feasible_count: int = 0
+    in_band_count: int = 0
     evaluated_count: int = 0
 
     def picks(self) -> List[Tuple[str, ScoredCombo]]:
@@ -396,7 +396,7 @@ def optimize(menu: Sequence[MenuItem], coupons: Sequence[Coupon],
             relax_note = "当前菜单无法满足目标，已按最接近原则降级推荐"
 
     res = OptimizationResult(target=target, relax_note=relax_note,
-                             feasible_count=len(in_band), evaluated_count=len(scored))
+                             in_band_count=len(in_band), evaluated_count=len(scored))
     if pool:
         res.best_overall = pool[0]
         res.best_protein = max(

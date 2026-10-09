@@ -120,7 +120,7 @@ scored.sort(key=lambda s: (0 if s.in_band else 1, s.score))
 | 级别 | 条件 | 说明 |
 |---|---|---|
 | 一级 | 热量落在 `[low, high]` 且钠 ≤ 1.5×cap | 理想情况，三套方案均从此池选出 |
-| 二级 | 热量在 `[0.78×, 1.35×]` 目标且钠 ≤ 1.5×cap | 无完全达标组合时启用，设置 `relax_note` |
+| 二级 | 热量在 `[0.78×, 1.35×]` 目标且钠 ≤ 1.5×cap | 无热量落在目标带内的组合时启用，设置 `relax_note` |
 | 三级 | 热量 ≥ 0.6× 目标 | 进一步放宽，`relax_note` 说明已降级 |
 | 兜底 | 取分数前 50 名 | 菜单与目标完全不匹配，`relax_note` 明确告知 |
 
@@ -155,5 +155,5 @@ scored.sort(key=lambda s: (0 if s.in_band else 1, s.score))
 | 纳入甜品 | `optimize(..., allow_dessert=True)`，候选数翻倍 |
 | 固定预算上限 | 在 `optimize` 前对 `combos` 按 `payable` 过滤 |
 
-修改权重后请运行 `python scripts/selftest.py`，确保
+修改权重后请运行 `python3 scripts/selftest.py`，确保
 `test_optimizer_end_to_end` 中的不变式（营养优先级、方案去重）仍然成立。

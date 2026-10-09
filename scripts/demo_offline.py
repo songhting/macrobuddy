@@ -10,9 +10,9 @@
 
 用法
 ----
-    python scripts/demo_offline.py
-    python scripts/demo_offline.py --goal cut --weight 72 --height 175 --meals 3 --index 1
-    python scripts/demo_offline.py --json
+    python3 scripts/demo_offline.py
+    python3 scripts/demo_offline.py --goal cut --weight 72 --height 175 --meals 3 --index 1
+    python3 scripts/demo_offline.py --json
 
 注意：示例数据为近似估计，非麦当劳官方实时数据。
 真实运行时，菜单与价格必须来自 mcd-mcp 的实时工具返回。
@@ -93,7 +93,7 @@ def main(argv=None) -> int:
             "daily_target": daily.to_dict(),
             "meal_target": target.to_dict(),
             "stats": {"evaluated": result.evaluated_count,
-                      "feasible": result.feasible_count,
+                      "in_band": result.in_band_count,
                       "relax_note": result.relax_note},
             "picks": [{
                 "role": role,
@@ -136,7 +136,7 @@ def main(argv=None) -> int:
           f"｜碳水 {target.carb_g:.0f} g｜钠 {target.sodium_mg:.0f} mg")
 
     print("\n[4] 搜索空间")
-    print(f"    枚举组合 {result.evaluated_count} 个，其中完全达标 {result.feasible_count} 个")
+    print(f"    枚举组合 {result.evaluated_count} 个，其中热量落在目标带内 {result.in_band_count} 个")
     if result.relax_note:
         print(f"    ⚠ {result.relax_note}")
 

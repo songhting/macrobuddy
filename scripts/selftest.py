@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""MacroBuddy · 自测用例（零依赖，直接 python scripts/selftest.py）
+"""MacroBuddy · 自测用例（零依赖，直接 python3 scripts/selftest.py）
 
 覆盖：BMR/TDEE 公式、宏量分配边界、单餐摊分与扣减、套餐价判定、
 优惠券择优与门槛、多目标打分的各项惩罚、优化器可行集与三方案去重。

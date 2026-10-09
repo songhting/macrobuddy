@@ -48,7 +48,7 @@ description: 麦当劳「营养 × 预算 × 优惠」三约束点单决策助�
 
 ### Step 3 · 推导营养目标（本地脚本）
 ```bash
-python scripts/demo_offline.py --sex male --age 30 --height 175 --weight 72 \
+python3 scripts/demo_offline.py --sex male --age 30 --height 175 --weight 72 \
     --activity light --goal cut --meals 3 --index 1 --json
 ```
 或用模块方式：
