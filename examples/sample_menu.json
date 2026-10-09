@@ -1,0 +1,43 @@
+{
+  "_disclaimer": "示例数据，仅用于在无 MCP Token 环境下验证算法正确性。数值为公开渠道的近似估计，非麦当劳官方实时数据；实际运行时必须由 mcd-mcp 的 query-meals / query-meal-detail / list-nutrition-foods / calculate-price 实时替换。",
+  "_units": {
+    "kcal": "千卡",
+    "protein_g": "克",
+    "fat_g": "克",
+    "carb_g": "克",
+    "sodium_mg": "毫克",
+    "price": "元",
+    "set_price": "元，含 1 份小食 + 1 份饮品的套餐价"
+  },
+  "menu": [
+    { "sku": "BIGMAC",  "name": "巨无霸",        "category": "main", "kcal": 550, "protein_g": 25, "fat_g": 30, "carb_g": 43, "sodium_mg": 950,  "price": 26.5, "set_price": 38.0, "tags": ["高蛋白", "经典"] },
+    { "sku": "DBLCHS",  "name": "双层吉士汉堡",  "category": "main", "kcal": 440, "protein_g": 25, "fat_g": 22, "carb_g": 33, "sodium_mg": 850,  "price": 22.0, "set_price": 33.5, "tags": ["高蛋白"] },
+    { "sku": "MCFSPY",  "name": "麦辣鸡腿堡",    "category": "main", "kcal": 570, "protein_g": 25, "fat_g": 32, "carb_g": 45, "sodium_mg": 1100, "price": 22.5, "set_price": 35.0, "tags": ["高钠"] },
+    { "sku": "GRILL",   "name": "板烧鸡腿堡",    "category": "main", "kcal": 430, "protein_g": 24, "fat_g": 18, "carb_g": 42, "sodium_mg": 900,  "price": 23.0, "set_price": 35.5, "tags": ["低碳水"] },
+    { "sku": "CHSBG",   "name": "吉士汉堡",      "category": "main", "kcal": 300, "protein_g": 15, "fat_g": 13, "carb_g": 30, "sodium_mg": 700,  "price": 14.0, "set_price": 26.0, "tags": ["低热量"] },
+    { "sku": "FILET",   "name": "深海鳕鱼堡",    "category": "main", "kcal": 480, "protein_g": 18, "fat_g": 23, "carb_g": 47, "sodium_mg": 800,  "price": 22.5, "set_price": 35.0, "tags": [] },
+    { "sku": "MCCHK",   "name": "麦香鸡",        "category": "main", "kcal": 400, "protein_g": 17, "fat_g": 19, "carb_g": 42, "sodium_mg": 800,  "price": 20.0, "set_price": 31.0, "tags": [] },
+
+    { "sku": "FRIESM",  "name": "薯条(中)",      "category": "side",  "kcal": 340, "protein_g": 4,  "fat_g": 17, "carb_g": 44, "sodium_mg": 250, "price": 12.0, "tags": ["高碳水"] },
+    { "sku": "FRIESS",  "name": "薯条(小)",      "category": "side",  "kcal": 230, "protein_g": 3,  "fat_g": 11, "carb_g": 30, "sodium_mg": 170, "price": 10.0, "tags": [] },
+    { "sku": "NUG5",    "name": "麦乐鸡(5块)",   "category": "side",  "kcal": 250, "protein_g": 14, "fat_g": 15, "carb_g": 15, "sodium_mg": 500, "price": 13.0, "tags": ["高蛋白"] },
+    { "sku": "CORN",    "name": "玉米杯",        "category": "side",  "kcal": 90,  "protein_g": 3,  "fat_g": 2,  "carb_g": 17, "sodium_mg": 5,   "price": 9.0,  "tags": ["低热量", "低钠"] },
+    { "sku": "APPLE",   "name": "苹果片",        "category": "side",  "kcal": 35,  "protein_g": 0,  "fat_g": 0,  "carb_g": 9,  "sodium_mg": 0,   "price": 7.0,  "tags": ["低热量", "低钠"] },
+    { "sku": "PIE",     "name": "香芋派",        "category": "side",  "kcal": 250, "protein_g": 3,  "fat_g": 13, "carb_g": 31, "sodium_mg": 200, "price": 8.0,  "tags": ["高糖"] },
+
+    { "sku": "COKEM",   "name": "可乐(中)",      "category": "drink", "kcal": 150, "protein_g": 0,  "fat_g": 0,  "carb_g": 38, "sodium_mg": 15,  "price": 9.0,  "tags": ["高糖"] },
+    { "sku": "COKEZ",   "name": "零度可乐(中)",  "category": "drink", "kcal": 0,   "protein_g": 0,  "fat_g": 0,  "carb_g": 0,  "sodium_mg": 20,  "price": 9.0,  "tags": ["零热量"] },
+    { "sku": "OJ",      "name": "橙汁",          "category": "drink", "kcal": 150, "protein_g": 1,  "fat_g": 0,  "carb_g": 35, "sodium_mg": 5,   "price": 11.0, "tags": [] },
+    { "sku": "MILK",    "name": "纯牛奶",        "category": "drink", "kcal": 130, "protein_g": 7,  "fat_g": 5,  "carb_g": 12, "sodium_mg": 100, "price": 10.0, "tags": ["高蛋白"] },
+    { "sku": "LATTE",   "name": "拿铁(中)",      "category": "drink", "kcal": 130, "protein_g": 7,  "fat_g": 7,  "carb_g": 11, "sodium_mg": 90,  "price": 15.0, "tags": [] },
+    { "sku": "WATER",   "name": "矿泉水",        "category": "drink", "kcal": 0,   "protein_g": 0,  "fat_g": 0,  "carb_g": 0,  "sodium_mg": 0,   "price": 6.0,  "tags": ["零热量"] },
+
+    { "sku": "CONE",    "name": "圆筒冰淇淋",    "category": "dessert", "kcal": 150, "protein_g": 2, "fat_g": 5, "carb_g": 24, "sodium_mg": 60, "price": 5.0, "tags": ["高糖"] }
+  ],
+  "coupons": [
+    { "coupon_id": "C_LUNCH30_5", "title": "满30减5",       "discount_type": "amount",  "value": 5,   "min_spend": 30 },
+    { "coupon_id": "C_BIGMAC80",  "title": "巨无霸8折",     "discount_type": "percent", "value": 0.8, "applies_skus": ["BIGMAC"], "max_discount": 6 },
+    { "coupon_id": "C_MAIN_4",    "title": "主食立减4元",   "discount_type": "amount",  "value": 4,   "applies_categories": ["main"], "min_spend": 25 },
+    { "coupon_id": "C_DRINK_1",   "title": "饮品立减1元",   "discount_type": "amount",  "value": 1,   "applies_categories": ["drink"] }
+  ]
+}
