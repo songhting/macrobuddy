@@ -185,7 +185,7 @@ macrobuddy/
 ## 八、本地验证（无需 Token）
 
 ```bash
-git clone https://github.com/<your-name>/macrobuddy.git
+git clone https://github.com/songhting/macrobuddy.git
 cd macrobuddy
 
 # 跑自测：9 条用例覆盖公式、边界、券规则、优化器全链路
